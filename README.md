@@ -4,7 +4,7 @@ Made by: **Aditya Jha, Arsh Anand**
 
 This project: **is a Machine learning model that takes in current data from the MLBStats api and predicts the outcome of the play based on player data**
 
-Time spent: **3** hours spent in total
+Time spent: **3** days spent in total
 
 ## Required Features
 
