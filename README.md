@@ -1,36 +1,32 @@
-# MLB PLay Prediction
+# MLB Play Prediction – End-to-End ML Pipeline
 
-Made by: **Aditya Jha, Arsh Anand**
+An end-to-end machine learning project that predicts the outcome of MLB plays using ten years of real game data.  
+The pipeline ingests raw stats from the MLB Stats API, processes it into structured datasets, trains a model, and serves predictions through a cloud-hosted API.
 
-This project: **is a Machine learning model that takes in current data from the MLBStats api and predicts the outcome of the play based on player data**
+## ✨ Features
+- **Data Acquisition:** Pulled 10 years of play-by-play data from the MLB Stats API.
+- **Data Engineering:** Built reproducible Pandas pipelines to clean, transform, and feature-engineer large datasets.
+- **Modeling:** Trained a Random Forest classifier that achieved **96.6% validation accuracy**, outperforming a Decision Tree baseline by 17%.
+- **Deployment:** Packaged and deployed the model as a RESTful API on **Google Cloud Vertex AI**, demonstrating a full MLOps flow from raw data to live predictions.
 
-Time spent: **3** days spent in total
+## ⚡ Tech Stack
+- **Machine Learning:** Scikit-learn • Pandas • NumPy
+- **Infrastructure:** Google Cloud • Vertex AI • REST API
 
-## Required Features
+## 🚀 Workflow
+1. **Data Collection:** Fetch historical play data with the MLB Stats API.
+2. **Preprocessing:** Clean and transform data using reproducible Pandas pipelines.
+3. **Model Training:** Compare Decision Tree and Random Forest models; tune hyperparameters.
+4. **Deployment:** Upload model to Vertex AI and expose a REST endpoint for real-time predictions.
 
-The following functionality is completed:
+## 🛠️ Local Setup
+```bash
+# Clone repo
+git clone https://github.com/<your-username>/mlb-play-prediction.git
+cd mlb-play-prediction
 
-- [x] **Predict next play with 90% accuracy**
-- [x] **Query and retrive the player stats for current players**
-- [x] **Deployed as an Vertex AI API on google cloud**
+# Install dependencies
+pip install -r requirements.txt
 
-The following features are to be implemented in the future:
-
-- [x] Developing a flask app that uses the api to make predictions
-- [x] Deploying the app publically
-
-## License
-
-    Copyright [yyyy] [name of copyright owner]
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+# Run training (example)
+python train_model.py
